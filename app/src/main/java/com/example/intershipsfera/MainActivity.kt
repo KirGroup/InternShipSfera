@@ -1,4 +1,4 @@
-package com.example.intershipsfera
+package com.example.internshipsfera
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
