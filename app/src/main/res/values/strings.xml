@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">InternShipSfera</string>
+    <string name="share">Share</string>
+    <string name="user_photo">user photo</string>
+    <string name="alise_peterson">Alise Peterson</string>
+    <string name="f_4_7">4.7</string>
+    <string name="languages">Russian, English, German</string>
+    <string name="location">location</string>
+    <string name="address">New York city, USA</string>
+    <string name="questionnaires">questionnaires</string>
+    <string name="people">people</string>
+    <string name="choose">Choose</string>
+    <string name="large_text">Жизнь будет гораздо проще и приятнее для каждого человека, если мы будем</string>
+    <string name="about_me">About me</string>
+    <string name="wishes">wishes</string>
+    <string name="dream_and_get">Dream and get</string>
+    <string name="chronicles">Chronicles</string>
+    <string name="moments">Moments</string>
+    <string name="edit_text">Edit text</string>
 </resources>

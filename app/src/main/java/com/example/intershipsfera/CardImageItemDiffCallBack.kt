@@ -11,6 +11,4 @@ class CardImageItemDiffCallBack: DiffUtil.ItemCallback<CardImage>(){
     override fun areContentsTheSame(oldItem: CardImage, newItem: CardImage): Boolean {
         return oldItem==newItem
     }
-
-
 }
