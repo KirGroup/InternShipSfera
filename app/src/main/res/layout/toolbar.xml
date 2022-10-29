@@ -7,13 +7,12 @@
     android:background="@color/background">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_back"
+        android:id="@+id/btn_menu"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="320dp"
-        android:background="@drawable/ic_arrow_back"
+        android:background="@drawable/ic_menu"
         android:padding="16dp"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -25,7 +24,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:gravity="top"
-        android:text="ID 123 456 789"
+        android:text="@string/id"
         android:textColor="@color/contents"
         android:translationY="-1.11sp" />
 

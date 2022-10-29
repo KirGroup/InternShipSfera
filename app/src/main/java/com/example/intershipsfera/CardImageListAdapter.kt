@@ -17,7 +17,7 @@ class CardImageListAdapter: ListAdapterCards <CardImage, CardImageListAdapter.Ca
 
     override fun onBindViewHolder(holder: CardImageItemHolder, position: Int) {
         val cardImageItem = getItem(position)
-
+            //paiload
     }
 
     class CardImageItemHolder(binding: ItemFirstLineBinding): RecyclerView.ViewHolder(binding.root){

@@ -8,13 +8,11 @@
     android:background="@color/background"
     tools:context=".MainActivity">
 
-
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -165,13 +163,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="SpeakableTextPresentCheck"
-                tools:itemCount="4"
+                tools:itemCount="8"
                 tools:listitem="@layout/item_first_line" />
 
+
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/linearLayoutCompat"
+                android:id="@+id/linear"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="16dp"
@@ -182,9 +181,9 @@
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/Button"
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:text="@string/questionnaires" />
 
                 <Space
@@ -193,13 +192,12 @@
 
                 <com.google.android.material.button.MaterialButton
                     style="@style/Button"
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:text="@string/people" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout"
@@ -213,15 +211,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+                app:layout_constraintTop_toBottomOf="@+id/linear">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter"
                     android:maxLength="300"
-                    android:theme="@style/EditText"
                     android:paddingStart="0dp"
                     android:paddingEnd="0dp"
                     android:text="@string/large_text"
@@ -230,7 +226,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/linearLayoutCompat2"
+                android:id="@+id/linear2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -254,23 +250,25 @@
                 <androidx.appcompat.widget.SwitchCompat
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
+                    android:checked="true"
+                    android:enabled="true"
+                    app:thumbTint="#9575CD"
                     tools:ignore="UseSwitchCompatOrMaterialXml" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_wishes"
                 style="@style/Button"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
                 android:text="@string/wishes"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2" />
+                app:layout_constraintTop_toBottomOf="@+id/linear2" />
 
             <TextView
                 android:id="@+id/tv_moments"
