@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,12 +7,6 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     tools:context=".MainActivity">
-
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -156,48 +150,40 @@
                 android:layout_height="105dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="372dp"
+                android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintDimensionRatio="3:1"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 tools:ignore="SpeakableTextPresentCheck"
-                tools:itemCount="8"
+                tools:itemCount="4"
                 tools:listitem="@layout/item_first_line" />
 
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/linear"
-                android:layout_width="match_parent"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_quest"
+                style="@style/Button"
+                android:layout_width="160dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rc_four_top">
+                app:layout_constraintTop_toBottomOf="@+id/rc_four_top"
+                android:text="@string/questionnaires" />
 
-                <com.google.android.material.button.MaterialButton
-                    style="@style/Button"
-                    android:layout_width="160dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/questionnaires" />
-
-                <Space
-                    android:layout_width="8dp"
-                    android:layout_height="match_parent" />
-
-                <com.google.android.material.button.MaterialButton
-                    style="@style/Button"
-                    android:layout_width="160dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/people" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_people"
+                style="@style/Button"
+                android:layout_width="160dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="184dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rc_four_top"
+                android:text="@string/people" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout"
@@ -211,7 +197,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linear">
+                app:layout_constraintTop_toBottomOf="@+id/btn_quest">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -225,50 +211,40 @@
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/linear2"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tv_dream"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="16dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                android:fontFamily="@font/inter"
+                android:text="@string/dream_and_get"
+                android:textColor="@color/contents"
+                android:textSize="20sp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/inter"
-                    android:text="@string/dream_and_get"
-                    android:textColor="@color/contents"
-                    android:textSize="20sp" />
-
-                <androidx.appcompat.widget.SwitchCompat
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:checked="true"
-                    android:enabled="true"
-                    app:thumbTint="#9575CD"
-                    tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="310dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                android:checked="true"
+                android:enabled="true"
+                app:thumbTint="#9575CD"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_wishes"
                 style="@style/Button"
-                android:layout_width="match_parent"
+                android:layout_width="328dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
                 android:text="@string/wishes"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linear2" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_dream" />
 
             <TextView
                 android:id="@+id/tv_moments"
@@ -285,11 +261,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintDimensionRatio="2"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_moments"
                 tools:itemCount="5"
@@ -312,15 +287,16 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_chronic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:spanCount="3"
                 tools:itemCount="12"
                 tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 tools:listitem="@layout/item_chronicles" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.core.widget.NestedScrollView>

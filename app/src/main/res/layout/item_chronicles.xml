@@ -1,18 +1,14 @@
-<androidx.cardview.widget.CardView
+<com.google.android.material.imageview.ShapeableImageView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/item_image_firs"
+    style="@style/roundedImageView"
     android:layout_width="106dp"
     android:layout_height="106dp"
-    >
-
-    <ImageView
-        android:id="@+id/rc_image"
-        app:srcCompat="@drawable/image_first_rc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintDimensionRatio="1:1"
-        android:scaleType="centerCrop"
-        />
-
-</androidx.cardview.widget.CardView>
+    app:srcCompat="@drawable/chronic_item"
+    app:layout_constraintDimensionRatio="1:1"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:scaleType="centerCrop">
+</com.google.android.material.imageview.ShapeableImageView>

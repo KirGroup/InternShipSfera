@@ -2,7 +2,6 @@ package com.example.intershipsfera
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internshipsfera.databinding.ItemFirstLineBinding
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
@@ -21,7 +20,7 @@ class CardImageListAdapter: ListAdapterCards <CardImage, CardImageListAdapter.Ca
     }
 
     class CardImageItemHolder(binding: ItemFirstLineBinding): RecyclerView.ViewHolder(binding.root){
-        val itemImage: ImageView = binding.rcImage
+//        val itemImage: ImageView = binding.
     }
 
 }

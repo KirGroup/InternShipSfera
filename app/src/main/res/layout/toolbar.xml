@@ -22,8 +22,7 @@
         android:layout_height="24dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="top"
+        android:gravity="center|start"
         android:text="@string/id"
         android:textColor="@color/contents"
         android:translationY="-1.11sp" />
