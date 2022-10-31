@@ -1,0 +1,10 @@
+<com.google.android.material.imageview.ShapeableImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/roundedImageView"
+    android:layout_width="79dp"
+    android:layout_height="140dp"
+    android:layout_marginEnd="4dp"
+    app:srcCompat="@drawable/moment_item"
+    app:layout_constraintDimensionRatio="H,3:4">
+</com.google.android.material.imageview.ShapeableImageView>
